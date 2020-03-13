@@ -1,4 +1,5 @@
 const path = require("path");
+const resolve = dir => path.join(__dirname, dir);
 
 const isDevelopment = process.env.VUE_APP_ENV === "development";
 const isProduction = process.env.VUE_APP_ENV === "production";
@@ -9,6 +10,14 @@ module.exports = {
   lintOnSave: true,
 
   productionSourceMap: isProduction ? false : true,
+
+  configureWebpack: {
+    resolve: {
+      alias: {
+        qq: resolve("qq")
+      }
+    }
+  },
 
   devServer: {
     contentBase: path.resolve(__dirname, "../dist"),

@@ -14,6 +14,6 @@ const getRoutes = () =>
     return all;
   }, []);
 
-const getRouteModule = moduleName => routeStore[moduleName];
+const getModule = moduleName => routeStore[moduleName];
 
-export { registerModule, getRoutes, getRouteModule };
+export { registerModule, getRoutes, getModule };

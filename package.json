@@ -47,5 +47,15 @@
     "sass-loader": "^8.0.2",
     "vue-cli-plugin-element": "~1.0.1",
     "vue-template-compiler": "^2.6.11"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "commitlint -E GIT_PARAMS"
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
   }
 }
