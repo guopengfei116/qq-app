@@ -1,4 +1,4 @@
-import { toArray } from "../lib/util";
+import { toArray } from "qq/qq-core/object/recombination";
 
 // { moduleName: routes{Array<Route>} }
 const routeStore = {};

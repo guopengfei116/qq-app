@@ -1,11 +1,16 @@
 import { clone } from "lodash";
-import { keyCamelify, keySnakeify, keyKebabify } from "../../lib/mutation";
+import {
+  keyCamelify,
+  keySnakeify,
+  keyKebabify
+} from "qq/qq-core/object/mutation";
 
 const styleDict = {
   camel: keyCamelify,
   snake: keySnakeify,
   kebab: keyKebabify
 };
+
 export const beautifyData = (data, style) => {
   if (!style) {
     return clone(data);

@@ -1,6 +1,8 @@
 import { isArray, isObjectLike, forIn } from "lodash";
 import { camelCase, snakeCase, kebabCase } from "lodash";
 
+// 无副作用的对象变体
+
 /**
  * 转驼峰命名 { a_b: 1, c-d: 2 } -> { aB: 1, cD: 2 }
  * @obj Array | Object
