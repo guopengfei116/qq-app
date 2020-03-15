@@ -46,7 +46,7 @@ export default {
   }
 
   .el-page-header {
-    color: @bg--primary;
+    color: @btn--primary;
   }
 }
 </style>
