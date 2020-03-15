@@ -1,0 +1,36 @@
+@import "~normalize.css";
+@import "./element.less";
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// 滚动条
+::-webkit-scrollbar {
+  // 垂直滚动条宽度
+  width: 4px;
+  // 水平滚动条高度
+  height: 8px;
+  // 滚动条
+  &-thumb {
+    border-radius: 4px;
+    background-color: #888888;
+  }
+  // 外层轨道
+  &-track {
+    background-color:rgba(0, 0, 0, 0);
+  }
+  // 内层轨道
+  &-track-piece {
+    background-color:rgba(0, 0, 0, 0);
+  }
+  // 滚动条两端的按钮
+  &-button {
+    display: none;
+  }
+  // 边角，两个滚动条交汇处
+  &-corner {
+    display: none;
+  }
+}

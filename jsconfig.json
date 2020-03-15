@@ -6,7 +6,8 @@
     "checkJs": false,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "qq/*": ["qq/*"]
     }
   }
 }

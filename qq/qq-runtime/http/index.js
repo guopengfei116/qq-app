@@ -13,7 +13,7 @@ import {
  * */
 function executorFactory(namespace) {
   const api = getApi(namespace);
-  const [method, url, other] = api;
+  const [method, url, other = {}] = api;
   const { engine, priority, queries, request, response } = other;
 
   // executor

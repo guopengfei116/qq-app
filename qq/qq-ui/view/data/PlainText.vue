@@ -142,7 +142,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import "../../assets/style/var.less";
+@import "~qq/qq-ui/assets/style/var.less";
 
 .plain-text {
   font-size: @font-size;
