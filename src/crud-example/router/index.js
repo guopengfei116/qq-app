@@ -11,7 +11,7 @@ export default [
         path: "example",
         component: () =>
           import(
-            /* webpackChunkName: "crudExample" */ "@/crud-example/view/main/MainContainer"
+            /* webpackChunkName: "crudExample" */ "@/crud-example/view/main/Index"
           )
       }
     ]

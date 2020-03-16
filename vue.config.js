@@ -19,6 +19,13 @@ module.exports = {
     }
   },
 
+  pluginOptions: {
+    "style-resources-loader": {
+      preProcessor: "less",
+      patterns: [resolve("qq/qq-ui/assets/style/var.less")]
+    }
+  },
+
   devServer: {
     contentBase: path.resolve(__dirname, "../dist"),
     host: "0.0.0.0",
