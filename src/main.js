@@ -2,19 +2,18 @@ import Vue from "vue";
 import App from "./App";
 import "qq/qq-ui/assets/style/reset.less";
 import "./plugins/element.js";
-import QBootstrap from "qq/qq-runtime";
+import QqBootstrap from "qq/qq-runtime";
 import modules from "./modules";
 
-QBootstrap(modules);
+QqBootstrap(modules);
 
 const isProduction = process.env.VUE_APP_ENV === "production";
 Vue.config.performance = !isProduction;
 Vue.config.devtools = !isProduction;
 Vue.config.productionTip = isProduction;
-Vue.config.productionTip = false;
 
 new Vue({
-  store: QBootstrap.createStore(),
-  router: QBootstrap.createRouter(),
+  store: QqBootstrap.createStore(),
+  router: QqBootstrap.createRouter(),
   render: h => h(App)
 }).$mount("#app");

@@ -3,11 +3,12 @@
   <el-menu-item
     v-if="!menu.children || !menu.children.length"
     :index="menu.id.toString()"
+    @click="onMenuClick(menu)"
   >
-    <router-link :to="{ path: menu.url, query: { menuid: menu.id } }">
+    <span>
       <i class="el-icon-document" />
       <span>{{ menu.text }}</span>
-    </router-link>
+    </span>
   </el-menu-item>
 
   <!-- recursion -->
@@ -44,6 +45,12 @@ export default {
           Object.prototype.hasOwnProperty.call(prop, property)
         );
       }
+    }
+  },
+
+  methods: {
+    onMenuClick(menu) {
+      this.$router.push({ path: menu.url, query: { menuid: menu.id } });
     }
   }
 };
