@@ -1,7 +1,5 @@
 import Vue from "vue";
 import App from "./App";
-import "qq/qq-ui/assets/style/reset.less";
-import "./plugins/element.js";
 import QqBootstrap from "qq/qq-runtime";
 import modules from "./modules";
 

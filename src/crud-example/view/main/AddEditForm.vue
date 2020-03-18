@@ -21,10 +21,10 @@
 
 <script>
 import { mapState, mapActions } from "vuex";
-import { ruleFactory } from "qq/qq-core/validator";
-import { overwrite } from "qq/qq-core/object/upgrade";
+import { ruleFactory } from "mo/validator";
+import { overwrite } from "mo/object";
+import { BaseForm } from "mo-ui/mixin";
 
-import BaseForm from "qq/qq-ui/mixins/BaseForm";
 import AddEditModel from "@/crud-example/model/vo/AddEdit";
 
 const modelRules = {

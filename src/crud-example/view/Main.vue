@@ -1,31 +1,28 @@
 <template>
-  <qq-basic-layout :logo="logo" :header="header" :user="user" :menus="menus">
+  <mo-basic-layout :logo="logo" :header="header" :user="user" :menus="menus">
     <router-view></router-view>
-  </qq-basic-layout>
+  </mo-basic-layout>
 </template>
 
 <script>
-import QqBasicLayout from "qq/qq-ui/view/layout/BasicLayout";
-
 export default {
   name: "CrudExample",
 
   provide: {},
 
-  components: {
-    QqBasicLayout
-  },
-
   data() {
     return {
       logo: "QQ",
+
       header: {
         app: "CRUD Example"
       },
+
       user: {
         name: "crud",
         tooltip: "example"
       },
+
       menus: [
         {
           id: 1,

@@ -1,6 +1,6 @@
-import { overwrite } from "qq/qq-core/object/upgrade";
-import actions from "@/crud-example/action/main";
+import { overwrite } from "mo/object";
 
+import actions from "@/crud-example/action/main";
 import SearchModel from "@/crud-example/model/vo/Search";
 import AddEditModel from "@/crud-example/model/vo/AddEdit";
 

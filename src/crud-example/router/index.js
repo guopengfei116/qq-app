@@ -1,4 +1,7 @@
+import { overwrite } from "mo/object";
+
 import ModuleMain from "@/crud-example/view/Main";
+import SearchModel from "@/crud-example/model/vo/Search";
 
 export default [
   {
@@ -9,10 +12,16 @@ export default [
       {
         name: "crudExample",
         path: "example",
-        component: () =>
-          import(
-            /* webpackChunkName: "crudExample" */ "@/crud-example/view/main/Index"
-          )
+        component() {
+          return import(
+            /* webpackChunkName: "crudExample" */
+            "@/crud-example/view/main/Index"
+          );
+        },
+        props({ query }) {
+          const app = overwrite(new SearchModel(), query);
+          return { app };
+        }
       }
     ]
   }
