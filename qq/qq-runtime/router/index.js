@@ -1,11 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
+import progressHooks from "./hooks/progress";
 import { registerModule, getRoutes } from "./router-manager";
 import initHook, { registerRouterHook } from "./hook-manager";
-
-import progressHooks from "./hooks/progress";
-export { registerModule, registerRouterHook };
 
 let installHook = router => {
   registerRouterHook(progressHooks);
@@ -30,4 +28,5 @@ let getRoute = (config = {}) => {
   return router;
 };
 
+export { registerModule, registerRouterHook };
 export default config => getRoute(config);

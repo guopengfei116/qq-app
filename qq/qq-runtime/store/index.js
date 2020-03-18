@@ -1,8 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-
 import initModule, { registerModule } from "./store-manager";
-export { registerModule };
 
 let getStore = (config = {}) => {
   Vue.use(Vuex);
@@ -18,4 +16,5 @@ let getStore = (config = {}) => {
   return store;
 };
 
+export { registerModule };
 export default config => getStore(config);

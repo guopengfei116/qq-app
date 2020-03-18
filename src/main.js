@@ -1,17 +1,10 @@
 import Vue from "vue";
-import App from "./App";
-import QqBootstrap from "qq/qq-runtime";
+import Mo from "mo";
 import modules from "./modules";
-
-QqBootstrap(modules);
 
 const isProduction = process.env.VUE_APP_ENV === "production";
 Vue.config.performance = !isProduction;
 Vue.config.devtools = !isProduction;
 Vue.config.productionTip = isProduction;
 
-new Vue({
-  store: QqBootstrap.createStore(),
-  router: QqBootstrap.createRouter(),
-  render: h => h(App)
-}).$mount("#app");
+new Mo(modules).mount("#app");

@@ -2,21 +2,21 @@ import MainLayout from "qq/qq-test/view/MainLayout";
 
 export default [
   {
-    name: "qqTest",
-    path: "/qq/test",
+    name: "qq",
+    path: "/qq",
     component: MainLayout,
     children: [
       {
-        name: "qqTestHttp",
+        name: "qqHttp",
         path: "http",
         component: () =>
           import(/* webpackChunkName: "qqHttp" */ "qq/qq-test/view/HttpMain")
       },
       {
-        name: "qqTestUi",
+        name: "qqUi",
         path: "ui",
         component: () =>
-          import(/* webpackChunkName: "qqTestUi" */ "qq/qq-test/view/UiMain")
+          import(/* webpackChunkName: "qqUi" */ "qq/qq-test/view/UiMain")
       }
     ]
   },

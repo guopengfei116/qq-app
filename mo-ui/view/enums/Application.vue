@@ -1,5 +1,4 @@
 <script>
-import Enums from "qq/qq-ui/view/form/Enums";
 import { getApplicationList } from "mo-ui/dao/enums";
 
 export default {
@@ -60,12 +59,12 @@ export default {
 
   render(h) {
     return (
-      <Enums
+      <mo-enums
         data={this.appEnums}
         value={this.value}
         attrs={this.$attrs}
         onChange={v => this.$emit("change", v)}
-      ></Enums>
+      ></mo-enums>
     );
   }
 };

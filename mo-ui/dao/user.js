@@ -1,4 +1,4 @@
-import { createNamespacedHelpers } from "qq/qq-runtime/http";
+import { createNamespacedHelpers } from "mo/http";
 
 const request = createNamespacedHelpers("moUi/user");
 

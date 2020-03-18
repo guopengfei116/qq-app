@@ -6,7 +6,7 @@ const menuApiData = {
       id: 1,
       parentId: 0,
       text: "Guide",
-      url: "/qq/test",
+      url: "/qq",
       children: [
         {
           children: [],
@@ -14,7 +14,7 @@ const menuApiData = {
           id: 11,
           parentId: 1,
           text: "UI",
-          url: "/qq/test/ui"
+          url: "/qq/ui"
         },
         {
           children: [],
@@ -22,7 +22,7 @@ const menuApiData = {
           id: 12,
           parentId: 1,
           text: "Http",
-          url: "/qq/test/http"
+          url: "/qq/http"
         }
       ]
     }

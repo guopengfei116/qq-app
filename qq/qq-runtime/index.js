@@ -1,5 +1,5 @@
-import createStore from "./store";
-import createRouter from "./router";
+import createStoreSingle from "./store";
+import createRouterSingle from "./router";
 
 import { registerModule as registerStore } from "./store";
 import { registerModule as registerRouter, registerRouterHook } from "./router";
@@ -17,7 +17,7 @@ function bootstrap(modules) {
   });
 }
 
-bootstrap.createStore = createStore;
-bootstrap.createRouter = createRouter;
+bootstrap.createStore = createStoreSingle;
+bootstrap.createRouter = createRouterSingle;
 
 export default bootstrap;
