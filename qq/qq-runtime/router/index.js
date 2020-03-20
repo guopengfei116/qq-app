@@ -6,7 +6,7 @@ import { registerModule, getRoutes } from "./router-manager";
 import initHook, { registerRouterHook } from "./hook-manager";
 
 let installHook = router => {
-  registerRouterHook(progressHooks);
+  registerRouterHook("qq", progressHooks);
   initHook(router);
 };
 

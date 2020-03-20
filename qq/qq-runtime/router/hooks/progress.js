@@ -1,22 +1,20 @@
 import "nprogress/nprogress.css";
 import nprogress from "nprogress/nprogress";
 
-const start = (to, from, next) => {
+const progressStart = (to, from, next) => {
   nprogress.start();
   next();
 };
 
-const done = () => nprogress.done();
+const progressDone = () => nprogress.done();
 
 export default [
   {
-    name: "progressStart",
     pointcut: "beforeEach",
-    executors: start
+    executors: progressStart
   },
   {
-    name: "progressDone",
     pointcut: "afterEach",
-    executors: done
+    executors: progressDone
   }
 ];

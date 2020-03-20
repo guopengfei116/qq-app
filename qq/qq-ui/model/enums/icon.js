@@ -1,4 +1,4 @@
-import { entries2enum } from "qq/qq-core/object/recombination";
+import { entries2enums } from "qq/qq-core/object/recombination";
 
 // 颜色
 export const iconTuple = [
@@ -10,4 +10,4 @@ export const iconTuple = [
 export const iconOptionalTuple = [["", "全部"], ...iconTuple];
 
 // 全值枚举，不含描述
-export const iconEnum = entries2enum(iconTuple);
+export const iconEnum = entries2enums(iconTuple);

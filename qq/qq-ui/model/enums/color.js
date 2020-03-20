@@ -1,4 +1,4 @@
-import { entries2enum } from "qq/qq-core/object/recombination";
+import { entries2enums } from "qq/qq-core/object/recombination";
 
 // 颜色
 export const colorTuple = [
@@ -15,4 +15,4 @@ export const colorTuple = [
 export const colorOptionalTuple = [["", "全部"], ...colorTuple];
 
 // 全值枚举，不含描述
-export const colorEnum = entries2enum(colorTuple);
+export const colorEnum = entries2enums(colorTuple);

@@ -5,7 +5,7 @@
  * @entries Array<tuple(v1, v2)>
  * @return Object
  */
-export const entries2enum = entries => {
+export const entries2enums = entries => {
   return entries.reduce((enums, entry) => {
     enums[(enums[entry[0]] = entry[1])] = entry[0];
     return enums;

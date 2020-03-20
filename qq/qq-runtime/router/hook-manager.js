@@ -1,11 +1,19 @@
 import { toArray } from "qq/qq-core/object/recombination";
 
-// { name: hook{name, pointcut, executors} }
+// { moduleName: hook{pointcut, executors} }
 const hookStore = {};
 
-const registerRouterHook = hooks => {
+const getUid = (() => {
+  let uid = 0;
+  return name => {
+    uid++;
+    return name ? `${name}_${uid}` : `auto_${uid}`;
+  };
+})();
+
+const registerRouterHook = (moduleName, hooks) => {
   hooks = toArray(hooks);
-  hooks.forEach(hook => (hookStore[hook.name] = hook));
+  hooks.forEach(hook => (hookStore[getUid(moduleName)] = hook));
 };
 
 const getHooks = () => Object.values(hookStore);
