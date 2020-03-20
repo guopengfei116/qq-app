@@ -5,9 +5,9 @@ const engineManager = {
     return engineFactory();
   },
 
-  register(name, option) {
+  register(name, optionHook) {
     const prev = this.fetch;
-    const engine = engineFactory(option);
+    const engine = engineFactory(optionHook);
 
     this.fetch = useName => {
       if (name === useName) {
@@ -32,6 +32,6 @@ const engineManager = {
 
 export const registerHttpEngine = engineManager.register.bind(engineManager);
 export const invadeHttpEngine = engineManager.invade.bind(engineManager);
-export const getEngine = engineManager.fetch.bind(engineManager);
+export const getEngine = (...arg) => engineManager.fetch(...arg);
 
 export default engineManager;

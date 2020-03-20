@@ -26,11 +26,11 @@ export default {
       queries: ["not"],
       request: {
         // 数据格式转为“蛇形”发送: { prop_exam: "snake" }
-        dataStyle: "snake"
+        style: "snake"
       },
       response: {
         // 数据格式转为“驼峰形”使用: { propExam: "camel" }
-        dataStyle: "camel"
+        style: "camel"
       }
     }
   ]

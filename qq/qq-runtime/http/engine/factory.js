@@ -10,6 +10,14 @@ const baseOption = {
   validateStatus: status => (status >= 200 && status < 300) || status === 304
 };
 
-export default option => {
-  return axios.create({ ...baseOption, ...option });
+export default optionHook => {
+  let option = {};
+
+  if (typeof optionHook === "function") {
+    option = optionHook(baseOption);
+  } else {
+    option = { ...baseOption, ...(optionHook || {}) };
+  }
+
+  return axios.create(option);
 };

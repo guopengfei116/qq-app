@@ -4,6 +4,7 @@ import api from "./api";
 import httpEngine from "./api/engine";
 
 const MODULE_NAME = "crudExample";
+
 export default ({
   registerRouter,
   registerStore,

@@ -50,6 +50,11 @@ const createNamespacedHelpers = prePath => sufPath => {
   return executorFactory(fullPath);
 };
 
-export { registerModule, registerHttpEngine, createNamespacedHelpers };
+export {
+  registerModule,
+  registerHttpEngine,
+  getEngine as getHttpEngine,
+  createNamespacedHelpers
+};
 
 export default executorFactory;
