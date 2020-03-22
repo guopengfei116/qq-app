@@ -44,9 +44,5 @@ export default {
   .buttons {
     display: inline-block;
   }
-
-  .el-page-header {
-    color: @btn--primary;
-  }
 }
 </style>

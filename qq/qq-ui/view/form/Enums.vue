@@ -23,6 +23,7 @@ export default {
 
     return (
       <el-select {...context.data}>
+        {context.data.slots && context.data.slots.default}
         {data.tuple.map(([name, value]) => (
           <el-option label={name} key={value} value={value}></el-option>
         ))}

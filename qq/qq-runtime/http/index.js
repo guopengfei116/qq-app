@@ -1,3 +1,4 @@
+import { clone } from "lodash";
 import { registerHttpEngine, getEngine } from "./engine-manager";
 import { registerModule, getApi } from "./api-manager";
 import {
@@ -14,14 +15,17 @@ import {
 function executorFactory(namespace) {
   const api = getApi(namespace);
   const [method, url, other = {}] = api;
-  const { engine, priority, queries, request, response } = other;
+  const { engine, priority, request, response } = other;
 
   // executor
   return (data, config) => {
+    data = clone(data);
+    let { queries = [] } = other;
+    const urlI = setParams(url, data);
+
     // data pre-processing
     data = beautifyData(data, request && request.style);
-
-    const urlI = setParams(url, data);
+    queries = beautifyData(queries, request && request.style);
     const queryI = extractQuery(queries, data);
     const configI = getPayloadConfig(method, data, queryI);
     const engineI = getEngine(engine);

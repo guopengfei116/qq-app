@@ -164,5 +164,10 @@ export default {
       min-width: @btn-width--small;
     }
   }
+  &.text {
+    .el-button {
+      min-width: auto;
+    }
+  }
 }
 </style>

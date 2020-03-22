@@ -41,7 +41,7 @@ export const setParams = (uri, data) => {
       console.error(errorMsg);
     }
 
-    delete data[name];
+    data[name] = null;
     return `/${param}`;
   });
 };
@@ -61,7 +61,7 @@ export const extractQuery = (queries = [], data = {}) => {
     }
 
     query[name] = value;
-    delete data[name];
+    data[name] = null;
   });
 
   return query;
