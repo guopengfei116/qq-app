@@ -31,7 +31,10 @@ export default {
       <mo-enums
         data={this.teamEnums}
         value={this.value}
-        attrs={this.$attrs}
+        {...{
+          attrs: this.$attrs,
+          slots: this.$slots
+        }}
         onChange={v => this.$emit("change", v)}
       ></mo-enums>
     );

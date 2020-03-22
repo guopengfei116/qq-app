@@ -5,9 +5,11 @@ import bootstrap from "qq/qq-runtime";
 class Mo {
   constructor(modules) {
     bootstrap(modules);
-    this.vue = new Vue({
-      store: bootstrap.createStore(),
-      router: bootstrap.createRouter(),
+    this.store = bootstrap.createStore();
+    this.router = bootstrap.createRouter();
+    Mo.vue = this.vue = new Vue({
+      store: this.store,
+      router: this.router,
       render: h => h(App)
     });
   }
@@ -17,15 +19,15 @@ class Mo {
     return (Mo.currentMo = this);
   }
 
-  getVue() {
+  static getRunVue() {
     return this.vue;
   }
 
-  getStore() {
+  static getRunStore() {
     return bootstrap.createStore();
   }
 
-  getRouter() {
+  static getRunRouter() {
     return bootstrap.createRouter();
   }
 }

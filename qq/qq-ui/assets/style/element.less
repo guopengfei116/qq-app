@@ -189,7 +189,7 @@
 }
 
 .el-input {
-  &-group__prepend, &-group__append {
+  & &-group__prepend, & &-group__append {
     width: 80px;
     background-color: rgba(0, 0, 0, 0) !important;
     border-color: @border--gray !important;
@@ -200,14 +200,14 @@
     }
   }
 
-  &__inner {
+  & &__inner {
     font-size: @font-size !important;
     color: @color--primary;
     border-color: @border--gray !important;
     background: rgba(0, 0, 0, 0) !important;
   }
 
-  &.is-disabled {
+  & &.is-disabled {
     .el-input__inner {
       color: @color--disabled;
     }
